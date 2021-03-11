@@ -19,8 +19,8 @@ sudo pip install pwntools
 sudo apt-get install qemu-user
 sudo apt-get install gcc-multilib
 ```  
-![avatar](.assets\1.png)  
-![avatar](.assets\2.png)
+![avatar](.assets/1.png)  
+![avatar](.assets/2.png)
 <br/>
 <br/>
 Mac系统上我用的是docker  
