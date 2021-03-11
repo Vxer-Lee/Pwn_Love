@@ -59,9 +59,9 @@ afl
 
 ---
 
-## [objdump详细使用教程](/objdump/readme.md)  
-## [readelf详细使用教程](/readelf/readme.md)  
-## [radare2学习笔记](/radre2/readme.md)  
+## [objdump详细使用教程](./objdump/readme.md)  
+## [readelf详细使用教程](./readelf/readme.md)  
+## [radare2学习笔记](./radre2/readme.md)  
 <br>
 <br>
 
