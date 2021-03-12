@@ -68,6 +68,94 @@ objdump -j .text -M intel --no-show-raw-insi -d xxx | awk -v RS= '/^[[:xdigit:]]
 ```
 ![avatar](.assets/8.png)  
 ![avatar](.assets/9.png)  
+<br/>
+<br/>
+
+## 调试启动带参程序
+```bash
+#直接用run 加参数即可
+gdb debugme
+(pwndbg)run hacker
+Hello World hacker!
+(pwndbg)
+#或者用set args
+(pwndbg)set args hacker argument2 argument3 argument4
+(pwndbg)run
+```
+![avatar](.assets/10.png)  
+  
+## 附加调试程序
+```
+ps -ef | grep "calc"
+gdb
+(pwndbg)attach 2644
+```
+![avatar](.assets/11.png)  
+<br/>
+<br/>
+
+## 断点设置
+### 查看断点信息
+```bash
+#infomation breakpoints
+info breakpoints
+```
+![avatar](.assets/12.png)  
+  
+### 根据函数名设置断点
+```bash
+break main
+break test
+break function
+```
+![avatar](.assets/13.png)  
+![avatar](.assets/14.png)  
+### 根据条件设置断点
+```
+break 1.c:16 if argc==1
+```
+![avatar](.assets/15.png)  
+  
+### 根据规则设置断点
+```bash
+#设置所有以test开头的函数断点
+rbreak test* 
+rbreak ^test
+#设置所有函数的断点
+rbreak .
+#总之rbreak后面就是规则
+
+#临时断点，只会运行一次
+tbreak xxx
+tbreak test
+tbreak *地址
+tbreak 1.c:7
+```
+![avatar](.assets/16.png)  
+![avatar](.assets/17.png)  
+
+### 跳过多次设置断点
+```
+ignore 断点序号 要跳过的次数
+ignore 1 33
+```
+![avatar](.assets/18.png)  
+
+### 禁用、启用、删除断点
+```bash
+#禁用
+disable #所有
+disable 标号 #禁用某序列号断点
+#启动
+enable 
+enable 标号
+enable delte 标号 #启动某标号断点后，自动删除
+#断点清除
+clear #所有
+clear function #删除某函数断点
+delete
+delete 标号
+```
 
 ---
 > https://www.yanbinghu.com/2019/04/20/41283.html  
