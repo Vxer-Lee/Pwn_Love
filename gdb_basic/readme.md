@@ -49,7 +49,7 @@ readelf -s pwnme
 ```
 objdump -t pwnme
 ```
-![avatar](.assets/5.png)  
+![avatar](.assets/6.png)  
 
 ### radare2（个人喜欢）
 ```
@@ -57,7 +57,17 @@ r2 pwnme
 aaa
 afl
 ```
-![avatar](.assets/6.png)  
+![avatar](.assets/7.png)  
+
+<br/>
+<br/>
+
+## 查看某函数的汇编代码
+```
+objdump -j .text -M intel --no-show-raw-insi -d xxx | awk -v RS= '/^[[:xdigit:]].*<test>/'
+```
+![avatar](.assets/8.png)  
+![avatar](.assets/9.png)  
 
 ---
 > https://www.yanbinghu.com/2019/04/20/41283.html  
