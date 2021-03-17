@@ -49,6 +49,11 @@ docker exec -it ${ctf_name} /bin/bash
 <br/>
 <br/>
 
+
+## 基础系列文章
+## [《GDB调试基础》](./gdb_basic/readme.md)
+<br/>
+
 ## PWN系列课程文章收集
 ## [《零基础入门PWN》](https://www.kanxue.com/book-57-853.htm)
 ## [《从0开始CTF-PWN》](https://bbs.pediy.com/thread-259272.htm)

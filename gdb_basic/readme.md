@@ -64,7 +64,7 @@ afl
 
 ## 查看某函数的汇编代码
 ```
-objdump -j .text -M intel --no-show-raw-insi -d xxx | awk -v RS= '/^[[:xdigit:]].*<test>/'
+objdump -j .text -M intel --no-show-raw-insn -d xxx | awk -v RS= '/^[[:xdigit:]].*<test>/'
 ```
 ![avatar](.assets/8.png)  
 ![avatar](.assets/9.png)  
@@ -151,11 +151,29 @@ enable
 enable 标号
 enable delte 标号 #启动某标号断点后，自动删除
 #断点清除
-clear #所有
+clear #所有，这个好像没有用
 clear function #删除某函数断点
-delete
+delete #这个是删除所有的有效果
 delete 标号
 ```
+<br/>
+
+## 打印寄存器，显示内存地址
+![avatar](.assets/19.png)  
+```bash
+p + 变量名 打印变量信息
+p $eax #默认十进制
+#按照格式打印
+p/x $eax
+p/c $eax
+p/a $eax
+```
+![avatar](.assets/20.png)  
+```bash
+x/20ab #显示20个字节，十六进制格式，类型字节
+x/20aw #显示20个地址，十六进制格式，类型DWORD 4字节
+```
+
 
 ---
 > https://www.yanbinghu.com/2019/04/20/41283.html  

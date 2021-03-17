@@ -21,7 +21,7 @@ objdump -j .text -M intel -d xxx
 #不显示字节码的反汇编显示
 objdump -j .text -M intel --no-show-raw-insn -d xxx
 #显示某函数的反汇编显示
-objdump -j .text -M intel --no-show-raw-insi -d xxx | awk -v RS= '/^[[:xdigit:]].*<test>/'
+objdump -j .text -M intel --no-show-raw-insn -d xxx | awk -v RS= '/^[[:xdigit:]].*<test>/'
 #根据开始地址，结束地址来显示反汇编内容
 objdump -M intel --no-show-raw-insn -d xxx --start-address=0x00411735 --stop-address=0x0041a880
 ```
