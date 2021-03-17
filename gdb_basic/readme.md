@@ -1,7 +1,7 @@
 # GDB调试基础  
 ## [objdump详细使用教程](./objdump/readme.md)  
 ## [readelf详细使用教程](./readelf/readme.md)  
-## [radare2学习笔记](./radre2/readme.md)  
+## [radare2学习笔记](./radare2/readme.md)  
 ## 前言
 GDB（GNU Debugger）是UNIX及UNIX-like下的强大调试工具，可以调试ada, c, c++, asm, minimal, d, fortran, objective-c, go, java,pascal等语言。本文以C程序为例，介绍GDB启动调试的多种方式。
 <br/>
